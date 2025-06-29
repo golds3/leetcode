@@ -28,7 +28,7 @@ class Prim:
                     parent[i] = cur
         # 打印最小生成树
         for i in range(1,len(parent)):
-            print(f'{i}->+{parent[i]}')
+            print(f'{parent[i]}->+{i}')
         #最短路径
         return sum(min_dist[2:])
 

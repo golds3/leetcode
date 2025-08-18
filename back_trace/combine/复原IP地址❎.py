@@ -10,13 +10,15 @@ class Solution:
                 return False
             if s[start] == '0' and start != end:
                 return False
-            su = 0
-            for i in range(start, end + 1):
-                if not s[i].isdigit():
-                    return False
-                su = su * 10 + int(s[i])
-                if su > 255:
-                    return False
+            # su = 0
+            # for i in range(start, end + 1):
+            #     if not s[i].isdigit():
+            #         return False
+            #     su = su * 10 + int(s[i])
+            #     if su > 255:
+            #         return False
+            if int(int(s[start:end+1])) > 255:
+                return False
             return True
 
         def dfs(start: int, cur: str):
